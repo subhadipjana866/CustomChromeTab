@@ -1,0 +1,108 @@
+/* SearchBar.css
+   Styles for the search bar with dropdown engine selector. */
+
+.search-form {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+  position: relative;
+  z-index: 1;
+}
+
+.search-input {
+  width: 500px;
+  padding: 12px 20px;
+  font-size: 18px;
+  background-color: rgba(32, 33, 36, 0.7); /* Semi-transparent */
+  backdrop-filter: blur(10px); /* Glass effect */
+  color: #e8eaed;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 25px 0 0 25px;
+  outline: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.search-input:focus {
+  border-color: #8ab4f8;
+  box-shadow: 0 4px 12px rgba(138, 180, 248, 0.25);
+}
+
+.search-input::placeholder {
+  color: #9aa0a6; /* Placeholder text color in dark mode */
+}
+
+.search-button-container {
+  position: relative;
+  display: flex;
+}
+
+.search-dropdown-toggle {
+  padding: 10px 15px;
+  font-size: 16px;
+  background-color: rgba(48, 49, 52, 0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-left: none;
+  color: #e8eaed; /* Light text */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.dropdown-arrow {
+  font-size: 10px;
+  margin-left: 5px;
+}
+
+.search-engine-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #35363a; /* Dark dropdown background */
+  border: 1px solid #5f6368;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4); /* Darker shadow */
+  z-index: 10;
+  width: 100%;
+  margin-top: 2px;
+}
+
+.search-engine-option {
+  width: 100%;
+  padding: 8px 12px;
+  text-align: left;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: #e8eaed; /* Light text */
+}
+
+.search-engine-option:hover {
+  background-color: #4a4c50; /* Darker hover */
+}
+
+.search-engine-option.active {
+  background-color: #3c4043; /* Darker active background */
+  color: #8ab4f8; /* Lighter blue text */
+}
+
+.search-button {
+  padding: 10px 20px;
+  font-size: 18px;
+  border: none;
+  background: linear-gradient(135deg, #8ab4f8, #7ea6f1);
+  color: #202124; /* Dark text on light button */
+  border-radius: 0 25px 25px 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.search-button:hover {
+  background: linear-gradient(135deg, #aecbfa, #97b7f3);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}

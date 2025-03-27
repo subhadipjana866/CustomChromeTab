@@ -1,38 +1,80 @@
+/* App.css
+   Global styles for the entire application. */
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) translateX(0) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-30px) translateX(15px) rotate(5deg);
+  }
+  50% {
+    transform: translateY(-50px) translateX(-20px) rotate(-5deg);
+  }
+  75% {
+    transform: translateY(-25px) translateX(20px) rotate(3deg);
+  }
+}
+
+@keyframes floatHighlight {
+  0%, 100% {
+    transform: translateY(0) translateX(0) scale(1);
+    opacity: 0.15;
+  }
+  50% {
+    transform: translateY(-70px) translateX(-30px) scale(1.2);
+    opacity: 0.25;
+  }
+}
+
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+  font-family: "Arial", sans-serif;
+  padding-top: 100px;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  /* Enhanced animated gradient background */
+  background: linear-gradient(-45deg, #080f23, #0a122a, #250444, #280548);
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+  color: #e8eaed; /* Light text color for dark background */
+  position: relative;
+  overflow: hidden;
 }
 
-.App-link {
-  color: #61dafb;
+/* Particle styles */
+.particle {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(138, 180, 248, 0.2); /* Default blue tint */
+  filter: blur(1px); /* Add a subtle blur for glow effect */
+  pointer-events: none;
+  z-index: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.highlight-particle {
+  filter: blur(3px);
+  z-index: 0;
+}
+
+.particle-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
 }

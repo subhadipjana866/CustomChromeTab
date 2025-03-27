@@ -1,0 +1,50 @@
+/* QuickLinks.css
+   Styles for the row of quick link icons or text. */
+
+.quick-links {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 40px;
+  position: relative;
+  z-index: 0;
+}
+
+.quick-link-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  background-color: rgba(53, 54, 58, 0.7); /* Semi-transparent background */
+  backdrop-filter: blur(5px); /* Glass effect */
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border */
+  border-radius: 12px;
+  font-size: 16px;
+  text-decoration: none;
+  color: #e8eaed; /* Light text */
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  width: 80px;
+}
+
+.quick-link-item:hover {
+  background-color: rgba(74, 76, 80, 0.8);
+  transform: translateY(-5px);
+  box-shadow: 0 7px 14px rgba(0, 0, 0, 0.25);
+}
+
+.quick-link-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+  width: 48px;
+  border-radius: 50%;
+  background-color: rgba(28, 29, 33, 0.7);
+  margin-bottom: 8px;
+}
+
+.quick-link-name {
+  font-size: 13px;
+  margin-top: 5px;
+  font-weight: 500;
+}

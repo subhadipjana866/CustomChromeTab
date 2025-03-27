@@ -1,23 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+/**
+ * App.js
+ * Main container for our Chrome-style homepage in React.
+ * Contains the Greeting, SearchBar, QuickLinks, and AppLauncher components.
+ */
+
+import React from "react";
+import Greeting from "./Greeting";
+import SearchBar from "./SearchBar";
+import QuickLinks from "./QuickLinks";
+import AppLauncher from "./AppLauncher";
+import ParticleBackground from "./ParticleBackground";
+import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* Background with floating particles */}
+      <ParticleBackground />
+      
+      {/* Chrome-style app launcher (9 dots) in the top right corner */}
+      <AppLauncher />
+      
+      {/* Greeting with fade-in effect and dynamic daypart */}
+      <Greeting userName="SUBHADIP" />
+      
+      {/* Google search input box */}
+      <SearchBar />
+      
+      {/* Minimal quick links similar to Chrome's new tab */}
+      <QuickLinks />
     </div>
   );
 }
