@@ -23,6 +23,7 @@ function NewsWidget() {
         const response = await fetch(
           `https://newsapi.org/v2/top-headlines?country=us&pageSize=3&apiKey=${NEWS_API_KEY}`
         );
+        console.log("Response status:", response); // Debugging line to check the response status
         
         if (!response.ok) {
           throw new Error("News data not available");
