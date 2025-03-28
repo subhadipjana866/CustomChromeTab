@@ -1,0 +1,83 @@
+/* WeatherWidget.css
+   Styles for the weather widget in the bottom left corner */
+
+.weather-widget {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background-color: rgba(53, 54, 58, 0.7);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 15px;
+  color: #e8eaed;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 2;
+  width: 180px;
+}
+
+.weather-widget:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.weather-main {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.weather-icon {
+  font-size: 36px;
+  margin-right: 15px;
+  color: #8ab4f8;
+}
+
+.weather-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.weather-temp {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.weather-condition {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.weather-location {
+  font-size: 12px;
+  text-align: right;
+  opacity: 0.7;
+  margin-top: 5px;
+}
+
+.weather-loading,
+.weather-error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+.weather-loading .weather-icon,
+.weather-error .material-icons {
+  margin: 0 0 10px 0;
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+}

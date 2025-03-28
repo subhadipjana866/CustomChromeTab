@@ -43,7 +43,7 @@
   text-align: center;
   font-family: "Arial", sans-serif;
   padding-top: 100px;
-  min-height: 100vh;
+  min-height: 86vh;
   /* Enhanced animated gradient background */
   background: linear-gradient(-45deg, #080f23, #0a122a, #250444, #280548);
   background-size: 400% 400%;
