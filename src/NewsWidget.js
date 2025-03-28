@@ -14,6 +14,7 @@ function NewsWidget() {
 
   // News API key - in a real app, store this in environment variables
   const NEWS_API_KEY = process.env.REACT_APP_NEWS_API_KEY;
+  console.log("News API Key:", NEWS_API_KEY); // Debugging line to check if the key is loaded
   
   useEffect(() => {
     // Fetch news data from News API
